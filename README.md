@@ -17,13 +17,13 @@
 
 ## 👋 About Me
 
-Senior QA Engineer with 13 years of enterprise experience at IBM Internet Security Systems and Fiserv, where I tested security products against real threats and owned QA for regulated financial platforms. I introduced penetration testing where it didn't exist, led an offshore QA team, and built test infrastructure from scratch in regulated environments.
+Senior QA Engineer with 10+ years of enterprise experience at IBM Internet Security Systems and Fiserv, where I tested security products against real threats and owned QA for regulated financial platforms. I introduced security testing where it didn't exist, led an offshore QA team, and built test infrastructure from scratch in regulated environments.
 
-I independently designed and built this portfolio from scratch using Playwright, TypeScript, GitHub Actions CI/CD, Jira/Xray, and a multi-agent LLM workflow — directing Claude Code and Gemini to generate, audit, and validate test automation across UI, API, and security layers.
+I independently designed and built this portfolio from scratch using Playwright, TypeScript, GitHub Actions CI/CD, Jira/Xray, and a multi-agent LLM workflow, directing Claude Code and Gemini to generate, audit, and validate test automation across UI, API, and security layers.
 
-I also bring domain knowledge in FinTech and blockchain from 3 years of active crypto trading and designing **DigitPilot** ([digitpilot.io](https://digitpilot.io)), an AI-powered trading education platform.
+Conceived and designed **DigitPilot** ([digitpilot.io](https://digitpilot.io)), a digital-asset education platform: built the product structure and interactive prototypes using Figma AI, incorporating personal Blockchain/Web3 domain knowledge and turning personal market experience into a structured learning concept and website.
 
-**Looking for:** Senior QA Engineer or QA Architect roles at FinTech, blockchain, or AI-driven companies. Hybrid or remote.
+**Looking for:** Senior QA Engineer roles at FinTech, blockchain, or AI-driven companies. Hybrid or remote.
 
 [![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ingridbordin)
 
