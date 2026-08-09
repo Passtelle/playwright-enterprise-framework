@@ -40,7 +40,7 @@ I also bring domain knowledge in FinTech and blockchain from 3 years of active c
 | [Introduction to Agent Skills](https://anthropic.skilljar.com/introduction-to-agent-skills) | Anthropic | Mar 2026 | [Certificate](https://verify.skilljar.com/c/db8ee6b87iwy) |
 | [AI Fluency Framework and Foundations](https://anthropic.skilljar.com/ai-fluency-framework-foundations) | Anthropic | Mar 2026 | [Certificate](https://verify.skilljar.com/c/d5kowr6ry8cr) |
 | [Claude 101](https://anthropic.skilljar.com/claude-101) | Anthropic | Mar 2026 | [Certificate](https://verify.skilljar.com/c/a25jqscpi26v) |
-| ISTQB Foundation Level | ISTQB | *(in progress)* | |
+| [ISTQB Certified Tester, Foundation Level](https://atsqa.org/certified-testers/profile/507bfd2e2f5a43d9a7a86a2abafa35ef) | ASTQB | 2026 | [Certificate](https://atsqa.org/certified-testers/profile/507bfd2e2f5a43d9a7a86a2abafa35ef) |
 
 ---
 
