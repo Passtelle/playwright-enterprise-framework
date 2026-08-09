@@ -1,6 +1,6 @@
 # QA Automation Portfolio
 
-[![Playwright Tests](https://github.com/Passtelle/PLAYWRIGHT-bootcamp/actions/workflows/playwright.yml/badge.svg)](https://github.com/Passtelle/PLAYWRIGHT-bootcamp/actions/workflows/playwright.yml)
+[![Playwright Tests](https://github.com/Passtelle/playwright-enterprise-framework/actions/workflows/playwright.yml/badge.svg)](https://github.com/Passtelle/playwright-enterprise-framework/actions/workflows/playwright.yml)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ingridbordin)
 
 ![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=playwright&logoColor=white)
@@ -63,7 +63,7 @@ I also bring domain knowledge in FinTech and blockchain from 3 years of active c
 ## 📁 Repository Structure
 
 ```
-PLAYWRIGHT-bootcamp/
+playwright-enterprise-framework/
 ├── pages/                     # 17 Page Object Models
 │   ├── SecureBankLoginPage.ts
 │   ├── SecureBankDashboardPage.ts

@@ -1,7 +1,7 @@
 # Ingrid Bordin
 
 Atlanta, GA | passtelle69@gmail.com | +1 678 570 0266
-LinkedIn: linkedin.com/in/ingridbordin | GitHub: github.com/Passtelle/PLAYWRIGHT-bootcamp
+LinkedIn: linkedin.com/in/ingridbordin | GitHub: github.com/Passtelle/playwright-enterprise-framework
 
 Senior QA Engineer | AI-Driven Test Automation | Playwright · TypeScript · CI/CD | Ex-IBM · Ex-Fiserv | FinTech & Security
 
@@ -107,7 +107,7 @@ Provided 2nd and 3rd line technical support for a proprietary enterprise applica
 
 ## Projects
 
-QA Automation Portfolio | github.com/Passtelle/PLAYWRIGHT-bootcamp
+QA Automation Portfolio | github.com/Passtelle/playwright-enterprise-framework
 Full portfolio built December 2025 to present. Live CI badge, Jira/Xray integration, 17 POMs, E2E banking suite, 4-layer API test suite, multi-agent AI review workflow. Every commit is real work.
 
 DigitPilot | digitpilot.io

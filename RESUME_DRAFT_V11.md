@@ -1,7 +1,7 @@
 Ingrid Bordin
 
 Atlanta, GA | ingrid.c.bordin@gmail.com | +1 678 570 0266
-linkedin.com/in/ingridbordin | github.com/Passtelle/PLAYWRIGHT-bootcamp
+linkedin.com/in/ingridbordin | github.com/Passtelle/playwright-enterprise-framework
 
 Senior QA Engineer | Playwright, TypeScript, CI/CD | Ex-IBM, Ex-Fiserv | FinTech and Security
 
@@ -87,7 +87,7 @@ September 2000 - April 2008 | Atlanta, GA
 
 PORTFOLIO
 
-QA Automation Portfolio | github.com/Passtelle/PLAYWRIGHT-bootcamp
+QA Automation Portfolio | github.com/Passtelle/playwright-enterprise-framework
 17 Page Object Models, growing automated test suite, CI/CD pipeline with auto-Jira integration, 4-layer API suite, multi-agent LLM audit workflow with 15 documented findings. Every commit is real work.
 
 ---
