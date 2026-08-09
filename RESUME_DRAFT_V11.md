@@ -9,7 +9,7 @@ Senior QA Engineer | Playwright, TypeScript, CI/CD | Ex-IBM, Ex-Fiserv | FinTech
 
 SUMMARY
 
-Senior QA Engineer with 13 years of enterprise experience at IBM Internet Security Systems and Fiserv, where I tested security products against real threats and owned QA for regulated financial platforms. I introduced penetration testing where it didn't exist, led an offshore QA team, and built test infrastructure from scratch in regulated environments. Most recently, I independently designed and built a production-grade automation portfolio from scratch using Playwright, TypeScript, GitHub Actions CI/CD, Jira/Xray, and a multi-agent LLM workflow, directing Claude Code and Gemini to generate, audit, and validate test automation across UI, API, and security layers.
+Senior QA Engineer with 10+ years of enterprise experience at IBM Internet Security Systems and Fiserv, where I tested security products against real threats and owned QA for regulated financial platforms. I introduced penetration testing where it didn't exist, led an offshore QA team, and built test infrastructure from scratch in regulated environments. Most recently, I independently designed and built a production-grade automation portfolio from scratch using Playwright, TypeScript, GitHub Actions CI/CD, Jira/Xray, and a multi-agent LLM workflow, directing Claude Code and Gemini to generate, audit, and validate test automation across UI, API, and security layers.
 
 ---
 
@@ -101,7 +101,8 @@ Introduction to Model Context Protocol | Anthropic | March 2026
 Introduction to Agent Skills | Anthropic | March 2026
 AI Fluency Framework and Foundations | Anthropic | March 2026
 Claude 101 | Anthropic | March 2026
-ISTQB Foundation Level | ISTQB | In progress
+ISTQB Certified Tester, Foundation Level | ASTQB | 2026 | atsqa.org/certified-testers/profile/507bfd2e2f5a43d9a7a86a2abafa35ef
+ASTQB Testing Using AI | ASTQB | In progress (target: July 2026)
 
 ---
 

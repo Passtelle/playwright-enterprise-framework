@@ -11,7 +11,7 @@
 ![Claude Code](https://img.shields.io/badge/Claude_Code-D4A574?style=for-the-badge&logo=anthropic&logoColor=white)
 ![GitHub Copilot](https://img.shields.io/badge/GitHub_Copilot-000000?style=for-the-badge&logo=github&logoColor=white)
 
-> 13+ years at IBM Security and Fiserv. Enterprise QA instinct, rebuilt with a modern AI-first automation stack.
+> 10+ years at IBM Security and Fiserv. Enterprise QA instinct, rebuilt with a modern AI-first automation stack.
 
 ---
 
