@@ -56,7 +56,7 @@ Conceived and designed **DigitPilot** ([digitpilot.io](https://digitpilot.io)), 
 | **Enterprise Banking Suite** | Parabank: login, registration, account management, 3-test registration suite (happy/negative/edge) | ✅ Complete |
 | **API Testing** | Postman manual lab → Playwright TypeScript automation, 4-layer coverage (happy/negative/boundary/security) | ✅ Complete |
 | **E2E + CI/CD** | SecureBank full banking flow, GitHub Actions pipeline, Xray integration, auto-created Jira test executions | ✅ Complete |
-| **Interview Machine** | Resume, mock interviews, ISTQB prep, GitHub Copilot | 🔄 In progress |
+| **Interview Machine** | Resume, mock interviews, ISTQB prep, GitHub Copilot | ✅ Complete  |
 
 ---
 
