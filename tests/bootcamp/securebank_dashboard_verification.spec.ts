@@ -7,8 +7,8 @@ test.describe('SecureBank Dashboard - State Verification', () => {
   // 🏗️ THE PLAN (Shared Variables)
   let loginPage: SecureBankLoginPage;
   let dashboardPage: SecureBankDashboardPage;
-  const username: string = 'admin';
-  const password: string = 'admin123';
+  const username: string = 'standard_user';
+  const password: string = 'bank_sauce';
 
   test.beforeEach(async ({ page }) => {
     loginPage = new SecureBankLoginPage(page);
@@ -17,36 +17,24 @@ test.describe('SecureBank Dashboard - State Verification', () => {
     await loginPage.login(username, password);
   });
 
-  test('Dashboard displays total balance after login', async () => {
-    // 🏗️ THE PLAN (Test-specific data)
-    const balancePattern: RegExp = /\$/i;
-
-    // 🎬 THE WORK (Actions)
-    await dashboardPage.navigateToDashboard();
-
+  test('Dashboard displays welcome message after login', async () => {
     // ✅ THE CHECK (Assertions)
-    await expect(dashboardPage.totalBalance).toBeVisible();
-    await expect(dashboardPage.totalBalance).toContainText(balancePattern);
+    await expect(dashboardPage.welcomeMessage).toBeVisible();
+    await expect(dashboardPage.welcomeMessage).toHaveText(/welcome back/i);
   });
 
-  test('Dashboard shows account count greater than zero', async () => {
+  test('Dashboard displays total net worth', async () => {
     // 🏗️ THE PLAN (Test-specific data)
-    const zeroAccounts: string = '0';
-
-    // 🎬 THE WORK (Actions)
-    await dashboardPage.navigateToDashboard();
+    const netWorthPattern: RegExp = /\$/;
 
     // ✅ THE CHECK (Assertions)
-    await expect(dashboardPage.accountsCount).toBeVisible();
-    await expect(dashboardPage.accountsCount).not.toHaveText(zeroAccounts);
+    await expect(dashboardPage.netWorthValue).toBeVisible();
+    await expect(dashboardPage.netWorthValue).toContainText(netWorthPattern);
   });
 
-  test('Dashboard shows transaction count', async () => {
-    // 🎬 THE WORK (Actions)
-    await dashboardPage.navigateToDashboard();
-
+  test('Dashboard shows recent transactions table', async () => {
     // ✅ THE CHECK (Assertions)
-    await expect(dashboardPage.transactionsCount).toBeVisible();
+    await expect(dashboardPage.recentTransactionsTable).toBeVisible();
   });
 
 });

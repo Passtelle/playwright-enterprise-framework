@@ -4,15 +4,19 @@ export class SecureBankDashboardPage {
 
   // 🏗️ THE PLAN (Locators & Page Reference)
   readonly page: Page;
-  readonly totalBalance: Locator;
-  readonly accountsCount: Locator;
-  readonly transactionsCount: Locator;
+  readonly welcomeMessage: Locator;
+  readonly netWorthValue: Locator;
+  readonly statCards: Locator;
+  readonly recentTransactionsTable: Locator;
+  readonly sidebarDashboardLink: Locator;
 
   constructor(page: Page) {
     this.page = page;
-    this.totalBalance = page.getByTestId("total-balance");           // 🥇 Gold
-    this.accountsCount = page.getByTestId("accounts-count");         // 🥇 Gold
-    this.transactionsCount = page.getByTestId("transactions-count"); // 🥇 Gold
+    this.welcomeMessage = page.getByTestId("dashboard-welcome-message"); // 🥇 Gold
+    this.netWorthValue = page.getByTestId("stat-card-net-worth-value"); // 🥇 Gold
+    this.statCards = page.getByTestId("dashboard-stat-cards"); // 🥇 Gold
+    this.recentTransactionsTable = page.getByTestId("recent-transactions-table"); // 🥇 Gold
+    this.sidebarDashboardLink = page.getByTestId("sidebar-link-dashboard"); // 🥇 Gold
   }
 
   // 🎬 THE WORK (Actions)
@@ -21,19 +25,6 @@ export class SecureBankDashboardPage {
   }
 
   async navigateToDashboard(): Promise<void> {
-    await this.page.getByTestId("nav-dashboard").click();
+    await this.sidebarDashboardLink.click();
   }
-
-  async getTotalBalance(): Promise<string> {
-    return (await this.totalBalance.textContent()) ?? '';
-  }
-
-  async getAccountsCount(): Promise<string> {
-    return (await this.accountsCount.textContent()) ?? '';
-  }
-
-  async getTransactionsCount(): Promise<string> {
-    return (await this.transactionsCount.textContent()) ?? '';
-  }
-
 }
