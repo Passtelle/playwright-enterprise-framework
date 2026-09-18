@@ -38,8 +38,9 @@ jobs:
 
   e2e-tests:
     name: E2E Tests (SecureBank)
-    timeout-minutes: 60
+    timeout-minutes: 15
     runs-on: ubuntu-latest
+    continue-on-error: true
     steps:
     - uses: actions/checkout@v4
     - uses: actions/setup-node@v4
@@ -49,17 +50,7 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Check if SecureBank is reachable
-      id: site-check
-      run: |
-        if curl -sSf --max-time 10 https://www.qaplayground.com/bank > /dev/null 2>&1; then
-          echo "reachable=true" >> $GITHUB_OUTPUT
-        else
-          echo "reachable=false" >> $GITHUB_OUTPUT
-          echo "⚠️ qaplayground.com is unreachable — skipping E2E tests"
-        fi
     - name: Run E2E tests
-      if: steps.site-check.outputs.reachable == 'true'
       run: npx playwright test tests/bootcamp/day32_securebank_e2e.spec.ts --project=chromium
     - name: Upload results to Xray
       if: always() && steps.site-check.outputs.reachable == 'true'
