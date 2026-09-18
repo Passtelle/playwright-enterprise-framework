@@ -5,8 +5,9 @@ on:
   pull_request:
     branches: [ main, master ]
 jobs:
-  test:
-    timeout-minutes: 60
+  api-tests:
+    name: API Tests (DummyJSON)
+    timeout-minutes: 10
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
@@ -15,16 +16,8 @@ jobs:
         node-version: lts/*
     - name: Install dependencies
       run: npm ci
-    - name: Install Playwright Browsers
-      run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test tests/bootcamp/day32_securebank_e2e.spec.ts
-      env:
-        PARABANK_USERNAME: ${{ secrets.PARABANK_USERNAME }}
-        PARABANK_PASSWORD: ${{ secrets.PARABANK_PASSWORD }}
-    - name: Debug - Find XML report
-      if: always()
-      run: find . -name "*.xml" -not -path "*/node_modules/*" 2>/dev/null && echo "XML found" || echo "No XML files found"
+    - name: Run API tests
+      run: npx playwright test tests/api/ --project=chromium
     - name: Upload results to Xray
       if: always()
       run: |
@@ -39,6 +32,49 @@ jobs:
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:
-        name: playwright-report
+        name: api-test-report
+        path: playwright-report/
+        retention-days: 30
+
+  e2e-tests:
+    name: E2E Tests (SecureBank)
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+    - name: Install dependencies
+      run: npm ci
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    - name: Check if SecureBank is reachable
+      id: site-check
+      run: |
+        if curl -sSf --max-time 10 https://www.qaplayground.com/bank > /dev/null 2>&1; then
+          echo "reachable=true" >> $GITHUB_OUTPUT
+        else
+          echo "reachable=false" >> $GITHUB_OUTPUT
+          echo "⚠️ qaplayground.com is unreachable — skipping E2E tests"
+        fi
+    - name: Run E2E tests
+      if: steps.site-check.outputs.reachable == 'true'
+      run: npx playwright test tests/bootcamp/day32_securebank_e2e.spec.ts --project=chromium
+    - name: Upload results to Xray
+      if: always() && steps.site-check.outputs.reachable == 'true'
+      run: |
+        token=$(curl -s -H "Content-Type: application/json" \
+          -X POST \
+          --data "{\"client_id\":\"${{ secrets.XRAY_CLIENT_ID }}\",\"client_secret\":\"${{ secrets.XRAY_CLIENT_SECRET }}\"}" \
+          https://xray.cloud.getxray.app/api/v2/authenticate | tr -d '"')
+        curl -s -H "Content-Type: text/xml" \
+          -H "Authorization: Bearer ${token}" \
+          --data @results.xml \
+          "https://xray.cloud.getxray.app/api/v2/import/execution/junit?projectKey=BAS"
+    - uses: actions/upload-artifact@v4
+      if: ${{ !cancelled() }}
+      with:
+        name: e2e-test-report
         path: playwright-report/
         retention-days: 30
