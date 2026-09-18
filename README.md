@@ -21,7 +21,7 @@ Senior QA Engineer with 10+ years of enterprise experience testing security prod
 
 Recently expanded into modern test automation by building a comprehensive Playwright and TypeScript framework covering UI and API testing, CI/CD pipelines, and Jira/Xray reporting — augmented by AI-assisted development and code review with Claude Code and Gemini, while retaining complete human ownership of testing strategy and risk-based decisions.
 
-**Looking for:** Senior QA Engineer roles in FinTech, security, compliance, or AI-driven companies. On Site, Hybrid or remote.
+**Looking for:** Senior QA Engineer roles in FinTech, security, compliance, or AI-driven companies. On site, hybrid or remote.
 
 [![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ingridbordin)
 
