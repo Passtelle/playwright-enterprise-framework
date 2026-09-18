@@ -87,10 +87,7 @@ playwright-enterprise-framework/
 ├── .github/workflows/
 │   └── playwright.yml         # CI/CD pipeline (push → test → Xray → Jira)
 │
-├── CLAUDE.md                  # Coding standards enforced on every file
-├── MASTER_PLAN.md             # Full bootcamp roadmap
-├── QA_AUDIT_LESSONS.md        # 15 real lessons from AI code auditing
-└── INTERVIEW_PRACTICE.md      # Mock interview sessions and answers
+└── CLAUDE.md                  # Coding standards enforced on every file
 ```
 
 ---

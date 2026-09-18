@@ -33,10 +33,42 @@ build/
 # Coverage
 coverage/
 
-# API Token JIRA
-node_modules/
-.env
-
-# Project files to ignore
+# Project files — local only
 hotel_backend.db
+wallet_backend.db
 Courses-Notes.odt
+results.xml
+
+# Interview and study materials
+INTERVIEW_*.md
+INTERVIEW_*.pdf
+RECRUITER_PREP.md
+CAREER_TARGETS.md
+REVISION_PLAN.md
+TECHNICAL_REVISION_PLAN.md
+API_TESTING_CHEATSHEET.md
+INTERVIEW_STORY.md
+
+# Bootcamp lessons and plans
+LESSONS.md
+LESSONS.pdf
+MASTER_PLAN.md
+QA_AUDIT_LESSONS.md
+QA_TEST_LAYERS.md
+DAY*_*.md
+
+# Resume
+Ingrid_Bordin_Resume.pdf
+RESUME_DRAFT*.md
+
+# Claude Code local files
+CLAUDE_PARTNER.md
+memory/
+.claude/settings.local.json
+
+# Debug artifacts
+debug_*
+
+# Wallet project files
+scripts/
+src/wallet.ts
