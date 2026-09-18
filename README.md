@@ -17,13 +17,11 @@
 
 ## 👋 About Me
 
-Senior QA Engineer with 10+ years of enterprise experience at IBM Internet Security Systems and Fiserv, where I tested security products against real threats and owned QA for regulated financial platforms. I introduced security testing where it didn't exist, led an offshore QA team, and built test infrastructure from scratch in regulated environments.
+Senior QA Engineer with 10+ years of enterprise experience testing security products against real-world exploits at IBM Internet Security Systems and regulated financial platforms at Fiserv. Introduced security testing, led an offshore team, and delivered end-to-end QA across startups and high-stakes platforms.
 
-I independently designed and built this portfolio from scratch using Playwright, TypeScript, GitHub Actions CI/CD, Jira/Xray, and a multi-agent LLM workflow, directing Claude Code and Gemini to generate, audit, and validate test automation across UI, API, and security layers.
+Recently expanded into modern test automation by building a comprehensive Playwright and TypeScript framework covering UI and API testing, CI/CD pipelines, and Jira/Xray reporting — augmented by AI-assisted development and code review with Claude Code and Gemini, while retaining complete human ownership of testing strategy and risk-based decisions.
 
-Conceived and designed **DigitPilot** ([digitpilot.io](https://digitpilot.io)), a digital-asset education platform: built the product structure and interactive prototypes using Figma AI, incorporating personal Blockchain/Web3 domain knowledge and turning personal market experience into a structured learning concept and website.
-
-**Looking for:** Senior QA Engineer roles at FinTech, blockchain, or AI-driven companies. Hybrid or remote.
+**Looking for:** Senior QA Engineer roles in FinTech, security, compliance, or AI-driven companies. Hybrid or remote.
 
 [![LinkedIn](https://img.shields.io/badge/Connect_on_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ingridbordin)
 
@@ -74,9 +72,13 @@ playwright-enterprise-framework/
 │   ├── day32_securebank_e2e.spec.ts   # Portfolio centerpiece
 │   └── ...
 │
-├── tests/api/                 # API test suite (DummyJSON)
+├── tests/api/                 # API test suite (DummyJSON) — 10 test files
 │   ├── BAS-4-auth-happy-path.spec.ts
 │   ├── BAS-6-auth-sql-injection.spec.ts
+│   ├── BAS-11-product-get.spec.ts
+│   ├── BAS-12-product-search.spec.ts
+│   ├── BAS-13-auth-refresh-token.spec.ts
+│   ├── BAS-14-auth-invalid-token.spec.ts
 │   └── ...
 │
 ├── helpers/
@@ -98,7 +100,7 @@ playwright-enterprise-framework/
 | Skill | How It's Demonstrated |
 |-------|----------------------|
 | **E2E Test Automation** | SecureBank banking flow: login, deposit, balance verified in CI |
-| **API Testing** | DummyJSON: 4 layers (happy / negative / boundary / security) in Postman + Playwright TypeScript |
+| **API Testing** | DummyJSON: 10 test files across auth, CRUD, search, pagination, and security layers |
 | **CI/CD Pipeline** | GitHub Actions: push, test, JUnit XML, Xray upload, Jira updated automatically |
 | **Page Object Model** | 17 POMs across banking, e-commerce, booking, and API test apps |
 | **AI-Augmented QA** | Claude Code + Gemini Judge + GitHub Copilot multi-agent orchestration |
@@ -147,6 +149,9 @@ Key technical decisions:
 |------|------|--------|
 | Login + deposit updates total balance | E2E Happy Path | ✅ Passing in CI |
 | Submit deposit with empty amount shows validation error | E2E Negative Path | ✅ Passing in CI |
+| Invalid credentials show error message | Login Validation | ✅ Passing |
+| Empty username/password fields prevent login | Input Validation | ✅ Passing |
+| Dashboard displays balance, accounts, transactions after login | State Verification | ✅ Passing |
 
 **Site:** [qaplayground.com/bank](https://www.qaplayground.com/bank), a Next.js banking simulation with real `data-testid` attributes throughout.
 
@@ -158,8 +163,14 @@ Key technical decisions:
 | `BAS-9-auth-missing-password.spec.ts` | Negative | Empty password → 400 |
 | `BAS-10-auth-boundary-username.spec.ts` | Boundary | 128-char username via `'a'.repeat(128)` |
 | `BAS-6-auth-sql-injection.spec.ts` | Security | SQL injection → no auth bypass, no 500 error |
+| `BAS-7-user-retrieval.spec.ts` | Negative | Non-existent user ID → 404 |
+| `BAS-8-auth-missing-token.spec.ts` | Security | Missing Authorization header → 401 |
+| `BAS-11-product-get.spec.ts` | Happy Path + Negative | GET product by ID → schema validation; non-existent → 404 |
+| `BAS-12-product-search.spec.ts` | Happy Path + Boundary | Search by keyword, empty query, pagination (limit/skip) |
+| `BAS-13-auth-refresh-token.spec.ts` | Happy Path | Login → refresh token → new tokens issued |
+| `BAS-14-auth-invalid-token.spec.ts` | Security | Invalid JWT rejected; malformed Authorization → 401 |
 
-All 4 layers covered: Happy Path, Negative, Boundary, Security. Designed to mirror the enterprise API coverage approach used at IBM and Fiserv.
+10 API test files covering auth, CRUD, search, pagination, and security. Designed to mirror the enterprise API coverage approach used at IBM and Fiserv.
 
 ---
 
